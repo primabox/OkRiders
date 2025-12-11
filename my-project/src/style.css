@@ -121,13 +121,13 @@
   }
 
   .features-content {
-    @apply text-center bg-black mx-auto rounded-[30px] w-[1200px] pt-16 pb-0 px-12;
-    min-height: 644px;
+    @apply text-center bg-black mx-auto rounded-[30px] w-[1200px] pt-16 pb-0 px-12 h-[800px];
+    min-height: 750px;
   }
 
   @media (min-width: 1920px) {
     .features-content {
-      @apply w-[1600px] px-16;
+      @apply w-[1600px] px-16;  
       min-height: 750px;
     }
   }
@@ -138,24 +138,28 @@
   }
 
   .features-subtitle {
-    @apply text-[#FAFAFA] mb-8 text-[32px] font-bold;
+    @apply text-[#FAFAFA] mb-10 text-[32px] font-bold;
     font-family: 'Creato Display', sans-serif;
   }
 
   .features-tags {
-    @apply flex flex-wrap justify-center gap-2 mb-12;
+    @apply flex flex-wrap justify-center gap-2 mb-16;
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .feature-tag {
-    @apply px-5 rounded-[10px] h-[34px] text-[20px] font-[600] text-[#171717] flex items-center gap-2 transition-transform duration-300 hover:scale-105;
+    @apply px-5 rounded-[10px] h-[34px] text-[20px] font-[600] text-[#171717] flex items-center gap-3 transition-transform duration-300 hover:scale-105;
     font-family: 'Creato Display', sans-serif;
   }
 
   .tag-icon {
-    @apply text-[16px];
+    width: auto;
+    height: auto;
+    max-width: 20px;
+    max-height: 20px;
+    display: block;
   }
 
   .gradient-orange {
@@ -196,8 +200,9 @@
 
 
   .features-phones {
-    @apply flex justify-center items-end gap-6;
-    margin-top: -20px;
+    @apply flex justify-center items-end gap-0;
+    margin-top: 90px;
+    transform: translate(20px, 00px);
   }
 
   .phone-img {
@@ -208,6 +213,313 @@
   .phone-center {
     width: 280px;
     transform: translateY(-30px);
+  }
+
+  /* Download Section */
+  .download {
+    @apply  pt-72 px-[150px];
+    background: #1E1E1E;
+  }
+
+  .download-content {
+    @apply flex items-center justify-between ;
+  }
+
+  .download-left {
+    @apply flex-1;
+  }
+
+  .download-header {
+    @apply flex items-center gap-6 mb-12;
+  }
+
+  .app-logo {
+    @apply w-[80px] h-[80px];
+    transform: translateY(-40px);
+  }
+
+  .download-title {
+    @apply text-[#FAFAFA] text-[42px] font-black italic leading-tight;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .qr-boxes {
+    @apply flex gap-8;
+  }
+
+  .qr-box {
+    @apply flex flex-col items-center  bg-black rounded-[30px] p-5;
+    width: 280px;
+    height: 320px;
+  }
+
+  .qr-code {
+    @apply w-[155px] h-[155px] mt-2;
+  }
+
+  .store-badge {
+    @apply h-auto;
+  }
+
+  .app-store-badge {
+    @apply w-[175px] h-[60px] mt-8;
+  }
+
+  .google-play-badge {
+    @apply w-[220px] h-[84px] mt-5;
+  }
+
+  .download-right {
+    @apply flex-shrink-0;
+  }
+
+  .download-image {
+    @apply h-[808px] w-[872px];
+    transform: translate(40px, -40px);
+  }
+
+  /* Register Section */
+  .register {
+    @apply pb-24 px-[150px];
+    background: #1E1E1E;
+  }
+
+  .register-content {
+    @apply flex items-center gap-12;
+  }
+
+  .register-left {
+    @apply flex-shrink-0 relative;
+    margin-left: -430px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .imac-image {
+    @apply w-[1600px] h-[1300px];
+    transform: translatey(-50px);
+  }
+
+  .register-right {
+    @apply relative;
+    z-index: 5;
+    @apply bg-black rounded-[30px] pt-16 pb-24 pl-48 pr-24 overflow-visible;
+    transform: translate(-550px, -35px);
+    pointer-events: auto;
+  }
+
+  .register-title {
+    @apply text-[#FAFAFA] text-[42px] font-black italic mb-2 whitespace-nowrap;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .register-description {
+    @apply text-[#FAFAFA] text-[20px] font-normal mb-8;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .register-form {
+    @apply flex flex-col;
+  }
+
+  .form-row {
+    @apply flex gap-4 mb-5;
+  }
+
+  .form-row-password {
+    @apply flex gap-4 mb-5 mt-5;
+  }
+
+  .form-input {
+    @apply bg-white rounded-[10px] text-[17px] px-4;
+    width: 340px;
+    height: 50px;
+    border: none;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .form-input::placeholder {
+    color: #CACACA;
+    font-size: 20px;
+  }
+
+  .form-divider {
+    @apply bg-[#DDDDDD] my-6;
+    height: 1.5px;
+    width: 695px;
+  }
+
+  .form-checkbox {
+    @apply mb-6 mt-6;
+  }
+
+  .checkbox-label {
+    @apply flex items-start gap-6 cursor-pointer;
+  }
+
+  .checkbox-input {
+    @apply appearance-none mt-3;
+    width: 33px;
+    height: 33px;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .checkbox-input:checked {
+    background-color: #FFFFFF;
+  }
+
+  .checkbox-input:checked::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1C1B1F;
+    font-size: 16px;
+    display: block;
+    line-height: 1;
+  }
+
+  .checkbox-text {
+    @apply text-[#F2F2F2] text-[15px]  font-normal leading-relaxed;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .register-button {
+    @apply bg-[#0FC26C] text-[#FAFAFA] text-[18px] font-black italic rounded-[36px] cursor-pointer transition-all duration-300 hover:opacity-90;
+    width: 260px;
+    height: 48px;
+    border: none;
+    font-family: 'Creato Display', sans-serif;
+    transform: translateY(30px);
+  }
+
+  /* Benefits Section */
+  .benefits {
+    @apply px-[150px] py-20;
+    background: #1E1E1E;
+  }
+
+  .benefits-header {
+    @apply flex justify-between items-start mb-16;
+  }
+
+  .benefits-title-wrapper {
+    @apply flex-1;
+  }
+
+  .benefits-title {
+    @apply text-[#FAFAFA] text-[72px] font-black italic leading-none mb-0;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .benefits-subtitle {
+    @apply text-[#FAFAFA] text-[72px] font-black italic leading-none mb-6;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .benefits-description {
+    @apply text-[#FAFAFA] text-[18px] font-normal leading-relaxed;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .benefits-promo {
+    @apply flex flex-col items-center;
+    padding-top: 20px;
+  }
+
+  .promo-icon {
+    @apply flex items-center gap-3 mb-4;
+    font-size: 48px;
+  }
+
+  .promo-bike {
+    filter: grayscale(100%) brightness(0) invert(1);
+  }
+
+  .promo-plus,
+  .promo-equals {
+    @apply text-[#FAFAFA] text-[32px] font-bold;
+  }
+
+  .promo-gift {
+  }
+
+  .promo-text {
+    @apply text-[#FAFAFA] text-[18px] font-normal text-center mb-6;
+    font-family: 'Creato Display', sans-serif;
+    line-height: 1.4;
+  }
+
+  .promo-button {
+    @apply bg-[#0FC26C] text-[#FAFAFA] text-[15px] font-black italic rounded-[10px] cursor-pointer transition-all duration-300 hover:opacity-90;
+    width: 200px;
+    height: 40px;
+    border: none;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .benefits-grid {
+    @apply grid grid-cols-3 gap-6 mb-12;
+  }
+
+  .benefit-card {
+    @apply relative bg-black rounded-[30px] p-8 overflow-hidden;
+    width: 500px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .benefit-card-title {
+    @apply text-[#FAFAFA] text-[42px] font-black italic mb-4;
+    font-family: 'Creato Display', sans-serif;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+  }
+
+  .benefit-card-image {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+  }
+
+  .benefit-card-button {
+    @apply absolute bottom-6 right-6 bg-[#2C2C2C] rounded-full cursor-pointer transition-all duration-300 hover:bg-[#3C3C3C];
+    width: 90px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+
+  .benefit-card-button i {
+    @apply text-[#FAFAFA] text-[24px] font-bold;
+  }
+
+  .benefits-footer {
+    @apply text-center;
+  }
+
+  .benefits-footer-text {
+    @apply text-[#FAFAFA] text-[18px] font-normal;
+    font-family: 'Creato Display', sans-serif;
+    line-height: 1.6;
   }
 
   /* Media Query for 1440px */
@@ -262,6 +574,45 @@
     .green-badge span {
       @apply text-[17px];
       line-height: 1.1;
+    }
+    
+    /* adjust positions for specific badges (override inline styles) */
+    .floating-badge.badge-orange {
+      right: 11% !important;
+    }
+
+    .hero img[src$="badgeGreen.png"] {
+      right: 8% !important;
+    }
+
+    /* Download section adjustments for 1440px */
+    .qr-box {
+      width: 206px;
+      height: 235px;
+    }
+
+    .qr-code {
+      @apply w-[110px] h-[110px];
+    }
+
+    .app-store-badge {
+      @apply w-[155px] h-[50px] mt-5;
+    }
+
+    .google-play-badge {
+      @apply w-[197px] h-[75px] mt-2;
+    }
+
+    .download-title {
+      @apply text-[32px] whitespace-nowrap;
+    }
+
+    .app-logo {
+      @apply w-[60px] h-[60px];
+    }
+
+    .download-image {
+      @apply w-[671px] h-[609px];
     }
   }
 }
