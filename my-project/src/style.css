@@ -6,16 +6,14 @@
   }
 
   body {
+    @apply overflow-x-hidden overflow-y-auto;
     font-family: 'Creato Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 }
 
 @layer components {
   .prihlaseni-btn {
-    @apply bg-transparent text-[#FAFAFA] cursor-pointer transition-all duration-300;
-    @apply border-[1.5px] border-[#FAFAFA] rounded-[100px];
-    @apply w-[206px] h-[38px];
-    @apply text-[20px] font-black italic;
+    @apply bg-transparent text-[#FAFAFA] cursor-pointer transition-all duration-300 border-[1.5px] border-[#FAFAFA] rounded-[100px] w-[206px] h-[38px] text-[20px] font-black italic;
     font-family: 'Creato Display', sans-serif;
   }
 
@@ -24,8 +22,7 @@
   }
 
   .hamburger-btn {
-    @apply w-10 h-10 bg-transparent border-none cursor-pointer;
-    @apply flex flex-col justify-center items-center gap-1.5 p-0;
+    @apply w-10 h-10 bg-transparent border-none cursor-pointer flex flex-col justify-center items-center gap-1.5 p-0;
   }
 
   .hamburger-btn span {
@@ -37,11 +34,15 @@
   }
 
   .hero {
-    @apply bg-black flex items-center min-h-[calc(100vh-100px)] px-[150px];
+    @apply bg-black flex items-center min-h-[calc(100vh-100px)] relative;
+  }
+
+  .floating-badge {
+    @apply absolute w-[70px] h-[70px];
   }
 
   .hero-content {
-    @apply max-w-3xl;
+    @apply max-w-3xl ml-36;
   }
 
   .hero-title {
@@ -58,11 +59,33 @@
     @apply flex gap-5;
   }
 
+  .hero-image {
+    @apply relative;
+    width: 1345px;
+    height: 970px;
+  }
+
+  .green-badge {
+    @apply absolute top-[75px] right-[340px] w-[190px] h-[190px] rounded-full flex items-center justify-center z-10;
+    background-color: #0FC26C;
+    transform: rotate(15deg);
+  }
+
+  .green-badge span {
+    @apply text-[#FFFFFF] text-[24px] font-black italic text-center;
+    line-height: 1.2;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .hero-image img {
+    @apply max-w-none;
+    transform: translateX(-100px);
+    width: 1345px;
+    height: 970px;
+  }
+
   .btn-download {
-    @apply border-none cursor-pointer transition-all duration-300;
-    @apply w-[232px] h-[50px] rounded-[100px];
-    @apply text-[#FAFAFA] text-[20px] font-black italic;
-    @apply hover:-translate-y-0.5;
+    @apply border-none cursor-pointer transition-all duration-300 w-[232px] h-[50px] rounded-[100px] text-[#FAFAFA] text-[20px] font-black italic hover:-translate-y-0.5;
     background: linear-gradient(to right, #C40127, #ED3C19);
     font-family: 'Creato Display', sans-serif;
   }
