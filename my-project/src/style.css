@@ -52,7 +52,7 @@
   }
 
   .hero-content {
-    @apply max-w-3xl ;
+    @apply max-w-3xl;
   }
 
   .hero-title {
@@ -127,7 +127,7 @@
 
   @media (min-width: 1920px) {
     .features-content {
-      @apply w-[1600px] px-16;  
+      @apply w-[1600px] px-16;
       min-height: 750px;
     }
   }
@@ -217,12 +217,12 @@
 
   /* Download Section */
   .download {
-    @apply  pt-72 px-[150px];
+    @apply pt-72 px-[150px];
     background: #1E1E1E;
   }
 
   .download-content {
-    @apply flex items-center justify-between ;
+    @apply flex items-center justify-between;
   }
 
   .download-left {
@@ -248,7 +248,7 @@
   }
 
   .qr-box {
-    @apply flex flex-col items-center  bg-black rounded-[30px] p-5;
+    @apply flex flex-col items-center bg-black rounded-[30px] p-5;
     width: 280px;
     height: 320px;
   }
@@ -388,7 +388,7 @@
   }
 
   .checkbox-text {
-    @apply text-[#F2F2F2] text-[15px]  font-normal leading-relaxed;
+    @apply text-[#F2F2F2] text-[15px] font-normal leading-relaxed;
     font-family: 'Creato Display', sans-serif;
   }
 
@@ -416,23 +416,27 @@
   }
 
   .benefits-title {
-    @apply text-[#FAFAFA] text-[72px] font-black italic leading-none mb-0;
+    @apply text-[#FAFAFA] text-[64px] font-black italic leading-none mb-0;
     font-family: 'Creato Display', sans-serif;
   }
 
   .benefits-subtitle {
-    @apply text-[#FAFAFA] text-[72px] font-black italic leading-none mb-6;
+    @apply text-[#FAFAFA] text-[64px] font-black italic leading-none mb-6;
     font-family: 'Creato Display', sans-serif;
   }
 
   .benefits-description {
     @apply text-[#FAFAFA] text-[18px] font-normal leading-relaxed;
     font-family: 'Creato Display', sans-serif;
+    width: 500px;
   }
 
   .benefits-promo {
     @apply flex flex-col items-center;
     padding-top: 20px;
+    align-self: flex-end;
+    margin-top: 80px;
+    transform: translateX(-20px);
   }
 
   .promo-icon {
@@ -444,30 +448,56 @@
     filter: grayscale(100%) brightness(0) invert(1);
   }
 
+  .promo-person,
+  .promo-union {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
   .promo-plus,
   .promo-equals {
-    @apply text-[#FAFAFA] text-[32px] font-bold;
+    color: #ACACAC;
+    font-size: 44px;
+    font-weight: 700;
   }
 
-  .promo-gift {
-  }
+  .promo-gift {}
 
   .promo-text {
-    @apply text-[#FAFAFA] text-[18px] font-normal text-center mb-6;
+    @apply text-[#FAFAFA] text-[20px] font-bold text-left mb-6;
     font-family: 'Creato Display', sans-serif;
     line-height: 1.4;
   }
 
   .promo-button {
-    @apply bg-[#0FC26C] text-[#FAFAFA] text-[15px] font-black italic rounded-[10px] cursor-pointer transition-all duration-300 hover:opacity-90;
-    width: 200px;
-    height: 40px;
+    @apply bg-[#0FC26C] text-[#FAFAFA] text-[18px] font-black italic rounded-[36px] cursor-pointer transition-all duration-300 hover:opacity-90;
+    width: 220px;
+    height: 45px;
     border: none;
     font-family: 'Creato Display', sans-serif;
+    transform: translateX(-20px);
   }
 
   .benefits-grid {
-    @apply grid grid-cols-3 gap-6 mb-12;
+    @apply grid grid-cols-3 gap-6 mb-8;
+  }
+
+  .benefits-grid-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 54px;
+    width: 100%;
+  }
+
+  .benefits-footer {
+    flex: 1 1 auto;
+  }
+
+  .benefits-footer-text {
+    max-width: 900px;
   }
 
   .benefit-card {
@@ -488,13 +518,47 @@
 
   .benefit-card-image {
     position: absolute;
-    bottom: 20px;
+    top: 55%;
     left: 50%;
-    transform: translateX(-50%);
-    height: 140px;
+    transform: translate(-50%, -50%);
+    height: 200px;
     width: auto;
-    object-fit: contain;
     z-index: 1;
+  }
+
+  /* Per-image sizing and rotation overrides */
+  .benefit-card-image.shield {
+    width: 190px;
+    height: 250px;
+    transform: translate(-50%, -50%) rotate(-10deg);
+  }
+
+  .benefit-card-image.fuelgun {
+    width: 325px;
+    height: 270px;
+    transform: translate(-50%, -56%) rotate(25deg);
+  }
+
+  .benefit-card-image.carhand {
+    width: 520px;
+    height: 340px;
+  }
+
+  .benefit-card-image.wash {
+    width: 300px;
+    height: 340px;
+    transform: translate(-50%, -44%)
+  }
+
+  .benefit-card-image.tire {
+    width: 170px;
+    height: 200px;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .benefit-card-image.water {
+    width: 270px;
+    height: 270px;
   }
 
   .benefit-card-button {
@@ -513,13 +577,135 @@
   }
 
   .benefits-footer {
-    @apply text-center;
+    @apply text-left;
   }
 
   .benefits-footer-text {
     @apply text-[#FAFAFA] text-[18px] font-normal;
     font-family: 'Creato Display', sans-serif;
+    line-height: 1.2;
+  }
+
+  /* Functions Section */
+  .functions {
+    @apply px-[150px] py-24;
+    background: #1E1E1E;
+  }
+
+  .functions-title {
+    @apply text-[#FAFAFA] text-[72px] font-black italic leading-none mb-20;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .function-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+  }
+
+  .function-item .function-content {
+    margin-right: 80px;
+  }
+
+  .function-item .function-image {
+    margin-left: auto;
+  }
+
+  .function-item-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .function-item-reverse .function-content {
+    margin-right: 0;
+    margin-left: 80px;
+  }
+
+  .function-item-reverse .function-image {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .function-content {
+    flex: 0 0 auto;
+    max-width: 450px;
+  }
+
+  .function-heading {
+    color: #FAFAFA;
+    font-size: 28px;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .function-subheading {
+    color: #FAFAFA;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .function-description {
+    color: #FAFAFA;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .function-detail {
+    color: #FAFAFA;
+    font-size: 14px;
+    font-weight: 400;
     line-height: 1.6;
+    font-family: 'Creato Display', sans-serif;
+  }
+
+  .function-image {
+    position: relative;
+    flex-shrink: 0;
+    background: #000000;
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 875px;
+    height: 420px;
+  }
+
+  .function-mobile {
+    width: 800px;
+    overflow: visible;
+    height: 800px;
+  }
+
+  .function-badge {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .function-desc {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: auto;
+    height: auto;
+    max-width: 200px;
+  }
+
+  .function-help {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
   }
 
   /* Media Query for 1440px */
@@ -555,13 +741,13 @@
       width: 1100px;
       height: 785px;
     }
-    
+
     /* smaller badges on 1440 */
     .floating-badge {
       width: 51px;
       height: 51px;
     }
-    
+
     /* green badge size on 1440 */
     .green-badge {
       width: 130px;
@@ -570,12 +756,12 @@
       right: 420px;
       top: 60px;
     }
-    
+
     .green-badge span {
       @apply text-[17px];
       line-height: 1.1;
     }
-    
+
     /* adjust positions for specific badges (override inline styles) */
     .floating-badge.badge-orange {
       right: 11% !important;
