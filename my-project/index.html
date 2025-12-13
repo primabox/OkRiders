@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="bg-black w-full flex items-center justify-between" style="height: 100px; padding: 0 150px;">
+  <header class="header bg-black w-full flex items-center justify-between" style="height: 100px; padding: 0 150px;">
     <div class="logo">
       <img src="img/logo.png" alt="OK RIDERS" class="h-10">
     </div>
@@ -22,13 +22,60 @@
       <button class="prihlaseni-btn">
         PŘIHLÁŠENÍ
       </button>
-      <button class="hamburger-btn">
+      <button class="hamburger-btn" id="hamburger-btn">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
   </header>
+
+  <div class="menu-overlay" id="menu-overlay">
+    <div class="menu-content">
+      <div class="menu-left">
+        <nav class="menu-nav">
+          <a href="#" class="menu-link">O APLIKACI</a>
+          <a href="#" class="menu-link">REGISTRACE</a>
+          <a href="#" class="menu-link">SLEVY A BENEFITY</a>
+          <a href="#" class="menu-link">FUNKCE APLIKACE</a>
+          <a href="#" class="menu-link">FAQ</a>
+          <a href="#" class="menu-link">KONTAKT</a>
+        </nav>
+      </div>
+
+      <div class="menu-right">
+        <div class="menu-qr-section">
+          <div class="menu-qr-box">
+            <img src="img/qr/qrCode1.png" alt="QR Code" class="menu-qr-code">
+            <img src="img/qr/appStore.png" alt="App Store" class="menu-store-badge">
+          </div>
+          <div class="menu-qr-box">
+            <img src="img/qr/qrCode1.png" alt="QR Code" class="menu-qr-code">
+            <img src="img/qr/googlePlay.png" alt="Google Play" class="menu-store-badge">
+          </div>
+        </div>
+
+        <div class="menu-right-content">
+          <div class="menu-social">
+            <a href="#" class="menu-social-icon"><img src="img/footer/instagram.svg" alt="Instagram"></a>
+            <a href="#" class="menu-social-icon"><img src="img/footer/facebook.svg" alt="Facebook"></a>
+            <a href="#" class="menu-social-icon"><img src="img/footer/linkedIn.svg" alt="LinkedIn"></a>
+          </div>
+
+          <div class="menu-brands">
+            <div class="menu-brand-item">
+              <p class="menu-brand-text">Inzerujte s námi</p>
+              <img src="img/footer/brandcarsLogo.svg" alt="Brand Cars" class="menu-brand-logo">
+            </div>
+            <div class="menu-brand-item">
+              <p class="menu-brand-text">Vydělávejte s námi</p>
+              <img src="img/footer/brandriderLogo.svg" alt="Brand Riders" class="menu-brand-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section class="hero">
     <img src="img/badges/badgeRed.png" alt="Badge" class="floating-badge" style="top: 45%; right: 48%;">
@@ -287,27 +334,22 @@
     <div class="function-item">
       <div class="function-content">
         <h3 class="function-heading">SKENER DOKUMENTŮ</h3>
-        <p class="function-subheading">o dostání partnechách k vypočítání</p>
+        <p class="function-subheading">a dokladů potřebných k vozidlu</p>
         <p class="function-description">
-          Mějte při sobě všechny důležité doklady ke svému vozu!
+          Mějtě při sobě všechny důležité doklady ke svému vozu!
         </p>
         <p class="function-detail">
-          Naskenujte je v Zelený pruhu, Řidičský průkaz, Technický průkaz, Osvědčení o kontrole, a nikdy je už
-          neztratíte.
+          Naskenujte si Zelenou kartu, Řidičský průkaz, Tehcnický průkaz, Smlouvy, Účtenky za tankování a další dokumenty, které uznáte za vhodné.
         </p>
       </div>
-      <div class="function-image">
-        <img src="img/function/mobile1.png" alt="Skener dokumentů" class="function-mobile">
-        <img src="img/function/badge1.png" alt="Badge" class="function-badge">
-        <img src="img/function/description1.png" alt="Description" class="function-desc">
-      </div>
+      <img src="img/function/function1.svg" alt="Skener dokumentů" class="function-1">
     </div>
 
     <div class="function-item function-item-reverse">
       <div class="function-content">
-        <h3 class="function-heading">SROVNÁVAČ<br>POJIŠTĚNÍ</h3>
-        <p class="function-subheading">Neplácejte na pojištění auta!</p>
-        <p class="function-description">
+        <h3 class="function-heading">SROVNÁVAČ <br> POJIŠTĚNÍ</h3>
+        <p class="function-subheading pt-10">Nepřeplácejte na pojištění auta!</p>
+        <p class="function-detail mb-8">
           Hlídejte za Vás termíny i ceny!
         </p>
         <p class="function-detail">
@@ -315,72 +357,163 @@
           jiných pojišťoven.
         </p>
       </div>
-      <div class="function-image">
-        <img src="img/function/mobile2.png" alt="Srovnávač pojištění" class="function-mobile">
-        <img src="img/function/badge2.png" alt="Badge" class="function-badge">
-        <img src="img/function/description2.png" alt="Description" class="function-desc">
-      </div>
+      <img src="img/function/function2.svg" alt="Srovnávač pojištění" class="function-2">
     </div>
 
     <div class="function-item">
       <div class="function-content">
         <h3 class="function-heading">ASISTENCE<br>V PŘÍPADĚ NEHODY</h3>
-        <p class="function-subheading">Opakujte dopravní nehru, krok po kroku</p>
-        <p class="function-description">
-          V šokové situaci Vás tato funkce provede celým procesem. Připomene Vám kontakty na asistenční služby,
-          pojišťovnu i pomoc na místě a následně Vás provede vyplněním Elektronického záznamu o nehodě.
+        <p class="function-subheading mt-8">Zvládněte dopravní nehodu lépe.</p>
+        <p class="function-detail mb-8">
+          Dopravní nehoda je vždy nepříjemná situace. Pomůžeme Vám s jejím snadnějším zvládnutí i s likvidací pojistné události.
+        </p>
+        <p class="function-detail">
+          Provedeme Vás jednotlivými kroky a s našim <strong>Elektronickým hlášení o nehodě</strong> Vám usnadníme také hlášení pojistné události pojišťovně.
         </p>
       </div>
-      <ditenv class="function-image">
-        <img src="img/function/mobile3.png" alt="Asistence v případě nehody" class="function-mobile">
-        <img src="img/function/badge3.png" alt="Badge" class="function-badge">
-        <img src="img/function/description3.png" alt="Description" class="function-desc">
-        <img src="img/function/help3.png" alt="Help" class="function-help">
-    </div>
+      <img src="img/function/function3.svg" alt="Asistence v případě nehody" class="function-3">
     </div>
 
     <div class="function-item function-item-reverse">
       <div class="function-content">
         <h3 class="function-heading">UPOZORNĚNÍ KONCE<br>PLATNOSTI</h3>
-        <p class="function-subheading">Hlídáme za vás STK, Povinné ručení, Pojištění...</p>
+        <p class="function-subheading">Dálniční známky, STK, Parkovací karty, Pojištění</p>
         <p class="function-description">
-          Neobávejte se toho, že zapomenete důležité termíny. Hlídáme je Vášim místě!
+          Nepropásněte žádné důležité termíny spojené s Vašim autem!
         </p>
         <p class="function-detail">
-          Nastavte si způsob upozorňování podle Vašeho přání. V několik dní před vypršením platnosti, v den vypršení, či
-          celý měsíc předem. Stačí otevřít notifikaci a přímo v aplikaci prodloužit platnost.
+       Nastavte si v aplikaci termíny a my budeme vše hlídat za Vás. Zašleme Vám vždy včas upozornění na blížící se konec platnosti a vyhnete se tak jakýmkoliv komplikacím, nebo pokutám, spojeným s prošvihnutím lhůty.
         </p>
       </div>
-      <div class="function-image">
-        <img src="img/function/mobile4.png" alt="Funkce 4" class="function-mobile">
-        <img src="img/function/badge4.png" alt="Badge" class="function-badge">
-        <img src="img/function/description4.png" alt="Description" class="function-desc">
-      </div>
+      <img src="img/function/function4.svg" alt="Funkce 4" class="function-4">
     </div>
 
     <div class="function-item">
       <div class="function-content">
         <h3 class="function-heading">AUTO V KAPSE</h3>
-        <p class="function-subheading">Vždy máte všechny informace a sebe vždy v kapsičce</p>
-        <p class="function-description">
-          Kompletní přehled Vašeho auta. Typ vozidla, barva, značka, VIN, SPZ...
-        </p>
+        <p class="function-subheading mt-8">Vždy mějte všechny informace o svém voze k dispozici!</p>
         <p class="function-detail">
-          O můžete vidět a hlídat informace o Vašich vozech. Jako při dodávce můžete evidovat všechny informace o
-          vozidle, ať už jdete do servisu, nebo třeba na STK.
+          Kompletní evidence Vašich vozidel. Technické údaje o vozidle, VIN kód, stav tachometru, informace o smlouvách, o pojištění máte k dispozici na jedno kliknutí.
         </p>
       </div>
-      <div class="function-image">
-        <img src="img/function/mobile5.png" alt="Funkce 5" class="function-mobile">
-        <img src="img/function/badge5.png" alt="Badge" class="function-badge">
-        <img src="img/function/description5.png" alt="Description" class="function-desc">
-      </div>
+      <img src="img/function/function5.svg" alt="Funkce 5" class="function-5">
     </div>
 
   </section>
 
+  <!-- Advertise Section -->
+  <section class="advertise">
+    <div class="advertise-content">
+      <div class="advertise-left">
+        <img src="img/advertise/advertiseLogo.svg" alt="Brand Riders" class="advertise-logo">
+        <h2 class="advertise-title">MOŽNOST VÝDĚLKU <br> REKLAMOU</h2>
+        <p class="advertise-subheading">
+          Nabídněte své auto k inzerci<br>
+          a získejte až <span class="advertise-badge">300 EUR</span> měsíčně!
+        </p>
+        <p class="advertise-description">
+          Vydělávejte peníze při svých běžných cestách.<br>
+          Férová odměna, majitel schvaluje navrhovanou kampaň.
+        </p>
+        <button class="advertise-button">ZJISTIT VÍCE</button>
+      </div>
+      <div class="advertise-right">
+        <img src="img/advertise/advertiseCar.png" alt="Advertise Car" class="advertise-car">
+      </div>
+    </div>
+  </section>
 
+  <!-- Questions Section -->
+  <section class="questions">
+    <h2 class="questions-title">NAJČASTEJŠIE OTÁZKY</h2>
+    
+    <div class="question-item">
+      <button class="question-button">
+        <span class="question-text">Ako sa môžem stať Brand Riders vodičom?</span>
+        <i class="fas fa-chevron-down question-icon"></i>
+      </button>
+      <div class="question-answer">
+        <p class="question-answer-text">
+          Je to jednoduché. Stiahnite si našu aplikáciu OK Riders. Zaregistrujte sa a zvoľte možnosť využitia aplikácie, kde ponúknete svoje auto potenciálnym inzerentom. Registrácia je zdarma a k ničomu vás nezaväzuje. Naopak môžete čerpať množstvo výhod určených iba pre komunitu OK Riders.
+        </p>
+      </div>
+    </div>
 
+    <div class="question-item">
+      <button class="question-button">
+        <span class="question-text">Vyhovuje moje auto vašim požiadavkám?</span>
+        <i class="fas fa-chevron-down question-icon"></i>
+      </button>
+      <div class="question-answer">
+        <p class="question-answer-text">
+          Je to jednoduché. Stiahnite si našu aplikáciu OK Riders. Zaregistrujte sa a zvoľte možnosť využitia aplikácie, kde ponúknete svoje auto potenciálnym inzerentom. Registrácia je zdarma a k ničomu vás nezaväzuje. Naopak môžete čerpať množstvo výhod určených iba pre komunitu OK Riders.
+        </p>
+      </div>
+    </div>
+
+    <div class="question-item">
+      <button class="question-button">
+        <span class="question-text">Je registrácia nejako spoplatená?</span>
+        <i class="fas fa-chevron-down question-icon"></i>
+      </button>
+      <div class="question-answer">
+        <p class="question-answer-text">
+          Je to jednoduché. Stiahnite si našu aplikáciu OK Riders. Zaregistrujte sa a zvoľte možnosť využitia aplikácie, kde ponúknete svoje auto potenciálnym inzerentom. Registrácia je zdarma a k ničomu vás nezaväzuje. Naopak môžete čerpať množstvo výhod určených iba pre komunitu OK Riders.
+        </p>
+      </div>
+    </div>
+
+    <p class="questions-footer">ZOBRAZIT VŠETKY</p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <img src="img/footer/footerLogo.svg" alt="OK Riders" class="footer-logo">
+        <p class="footer-copyright">
+          © OK Riders s.r.o., IČ: 23567476,<br>
+          Západní Předměstí 8/2,<br>
+          Východní Předměstí<br>
+          (Jižní 2 Slovany), 326 00 Plzeň
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <ul class="footer-links">
+          <li><a href="#">O aplikaci</a></li>
+          <li><a href="#">Registrace</a></li>
+          <li><a href="#">Slevy a benefity</a></li>
+          <li><a href="#">Funkce aplikace</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <ul class="footer-links">
+          <li><a href="#">Kontakt</a></li>
+          <li><a href="#">Slovník pojmů</a></li>
+          <li><a href="#">Ochrana osobních údajů</a></li>
+          <li><a href="#">Dokumenty ke stažení</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <div class="footer-social">
+          <a href="#" class="social-icon"><img src="img/footer/instagram.svg" alt="Instagram"></a>
+          <a href="#" class="social-icon"><img src="img/footer/facebook.svg" alt="Facebook"></a>
+          <a href="#" class="social-icon"><img src="img/footer/linkedIn.svg" alt="LinkedIn"></a>
+        </div>
+        
+        <p class="footer-brand-text">Inzerujte s námi</p>
+        <img src="img/footer/brandcarsLogo.svg" alt="Brand Cars" class="footer-brand-logo">
+        
+        <p class="footer-brand-text">Vydělávejte s námi</p>
+        <img src="img/footer/brandriderLogo.svg" alt="Brand Riders" class="footer-brand-logo">
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

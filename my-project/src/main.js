@@ -1,24 +1,38 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Questions accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const questionButtons = document.querySelectorAll('.question-button');
+  
+  questionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const questionItem = this.parentElement;
+      const answer = questionItem.querySelector('.question-answer');
+      const icon = this.querySelector('.question-icon');
+      
+      // Toggle active class
+      questionItem.classList.toggle('active');
+      answer.classList.toggle('active');
+      icon.classList.toggle('active');
+    });
+  });
 
-setupCounter(document.querySelector('#counter'))
+  // Hamburger menu functionality
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const menuOverlay = document.getElementById('menu-overlay');
+  
+  hamburgerBtn.addEventListener('click', function() {
+    this.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  });
+
+  // Close menu when clicking outside
+  menuOverlay.addEventListener('click', function(e) {
+    if (e.target === menuOverlay) {
+      hamburgerBtn.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+  });
+});
