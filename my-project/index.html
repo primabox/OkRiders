@@ -47,11 +47,11 @@
         <div class="menu-qr-section">
           <div class="menu-qr-box">
             <img src="img/qr/qrCode1.png" alt="QR Code" class="menu-qr-code">
-            <img src="img/qr/appStore.png" alt="App Store" class="menu-store-badge">
+            <img src="img/qr/appStore.png" alt="App Store" class="menu-app-store-badge">
           </div>
           <div class="menu-qr-box">
             <img src="img/qr/qrCode1.png" alt="QR Code" class="menu-qr-code">
-            <img src="img/qr/googlePlay.png" alt="Google Play" class="menu-store-badge">
+            <img src="img/qr/googlePlay.png" alt="Google Play" class="menu-google-play-badge">
           </div>
         </div>
 
@@ -72,6 +72,12 @@
               <img src="img/footer/brandriderLogo.svg" alt="Brand Riders" class="menu-brand-logo">
             </div>
           </div>
+        </div>
+
+        <div class="menu-footer-links mobile-only-flex">
+          <a href="#" class="menu-footer-link">Slovník pojmů</a>
+          <a href="#" class="menu-footer-link">Ochrana osobních údajů</a>
+          <a href="#" class="menu-footer-link">Dokumenty ke stažení</a>
         </div>
       </div>
     </div>
@@ -148,7 +154,7 @@
         </span>
         <span class="feature-tag gradient-cyan">
           <img src="img/icons/checkbook.png" alt="" class="tag-icon">
-          Elektronický záznam o nehodě
+          <span class="tag-text">Elektronický <br class="mobile-only"><span class="nowrap">záznam o nehodě</span></span>
         </span>
         <span class="feature-tag gradient-yellow">
           <img src="img/icons/coins.png" alt="" class="tag-icon">
@@ -176,7 +182,7 @@
           </h2>
         </div>
 
-        <div class="qr-boxes">
+        <div class="qr-boxes desktop-only">
           <div class="qr-box">
             <img src="img/qr/qrCode1.png" alt="QR Code" class="qr-code">
             <img src="img/qr/appStore.png" alt="App Store" class="store-badge app-store-badge">
@@ -185,6 +191,11 @@
             <img src="img/qr/qrCode1.png" alt="QR Code" class="qr-code">
             <img src="img/qr/googlePlay.png" alt="Google Play" class="store-badge google-play-badge">
           </div>
+        </div>
+
+        <div class="store-badges mobile-only-flex">
+          <img src="img/qr/appStore.png" alt="App Store" class="store-badge app-store-badge">
+          <img src="img/qr/googlePlay.png" alt="Google Play" class="store-badge google-play-badge">
         </div>
       </div>
 
@@ -315,8 +326,9 @@
     <div class="benefits-grid-footer">
       <div class="benefits-footer">
         <p class="benefits-footer-text">
-          Servisy, Oleje, STK, Wrap centra, Zabezpečení vozu, Autoškoly… <br>
-          Jsme na začátku, další partneři budou přibývat..
+          <span class="desktop-text">Servisy, Oleje, STK, Wrap centra, Zabezpečení vozu, Autoškoly… <br>
+          Jsme na začátku, další partneři budou přibývat..</span>
+          <span class="mobile-text">Servisy, Oleje, STK, Wrap centra , <br> Zabezpečení vozu, Autoškoly… Jsme na <br> začátku, další partneři budou přibývat..</span>
         </p>
       </div>
 
@@ -406,14 +418,18 @@
     <div class="advertise-content">
       <div class="advertise-left">
         <img src="img/advertise/advertiseLogo.svg" alt="Brand Riders" class="advertise-logo">
-        <h2 class="advertise-title">MOŽNOST VÝDĚLKU <br> REKLAMOU</h2>
+        <h2 class="advertise-title">
+          <span class="desktop-text">MOŽNOST VÝDĚLKU <br> REKLAMOU</span>
+          <span class="mobile-text">Možnost <br> výdělku <br> reklamou</span>
+        </h2>
         <p class="advertise-subheading">
           Nabídněte své auto k inzerci<br>
           a získejte až <span class="advertise-badge">300 EUR</span> měsíčně!
         </p>
         <p class="advertise-description">
-          Vydělávejte peníze při svých běžných cestách.<br>
-          Férová odměna, majitel schvaluje navrhovanou kampaň.
+          <span class="desktop-text">Vydělávejte peníze při svých běžných cestách.<br>
+          Férová odměna, majitel schvaluje navrhovanou kampaň.</span>
+          <span class="mobile-text">Vydělávejte peníze při svých běžných cestách. Férová odměna, majitel schvaluje navrhovanou kampaň.</span>
         </p>
         <button class="advertise-button">ZJISTIT VÍCE</button>
       </div>
@@ -470,8 +486,30 @@
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
-        <img src="img/footer/footerLogo.svg" alt="OK Riders" class="footer-logo">
-        <p class="footer-copyright">
+        <div class="footer-logo-brands-wrapper">
+          <div class="footer-logo-social-column">
+            <img src="img/footer/footerLogo.svg" alt="OK Riders" class="footer-logo">
+            
+            <div class="footer-social mobile-only-flex">
+              <a href="#" class="social-icon"><img src="img/footer/instagram.svg" alt="Instagram"></a>
+              <a href="#" class="social-icon"><img src="img/footer/facebook.svg" alt="Facebook"></a>
+              <a href="#" class="social-icon"><img src="img/footer/linkedIn.svg" alt="LinkedIn"></a>
+            </div>
+          </div>
+          
+          <div class="footer-brands-mobile">
+            <div class="footer-brand-item">
+              <p class="footer-brand-text">Inzerujte s námi</p>
+              <img src="img/footer/brandcarsLogo.svg" alt="Brand Cars" class="footer-brand-logo">
+            </div>
+            <div class="footer-brand-item">
+              <p class="footer-brand-text">Vydělávejte s námi</p>
+              <img src="img/footer/brandriderLogo.svg" alt="Brand Riders" class="footer-brand-logo">
+            </div>
+          </div>
+        </div>
+
+        <p class="footer-copyright desktop-text">
           © OK Riders s.r.o., IČ: 23567476,<br>
           Západní Předměstí 8/2,<br>
           Východní Předměstí<br>
@@ -497,7 +535,15 @@
         </ul>
       </div>
 
-      <div class="footer-column">
+      <p class="footer-copyright  mobile-text">
+          © OK Riders s.r.o., IČ: 23567476,<br>
+          Západní Předměstí 8/2,<br>
+          Východní Předměstí<br>
+          (Jižní 2 Slovany), 326 00 Plzeň
+        </p>
+
+
+      <div class="footer-column desktop-only">
         <div class="footer-social">
           <a href="#" class="social-icon"><img src="img/footer/instagram.svg" alt="Instagram"></a>
           <a href="#" class="social-icon"><img src="img/footer/facebook.svg" alt="Facebook"></a>
